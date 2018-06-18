@@ -26,6 +26,7 @@ darkflow所有的使用方法可以直接參考<a href="https://github.com/thtri
 1. <b>安裝：</b><p>  
     d:<p>                                                                                                                                       cd D:/darkflow-master<p>                                                                                                                   python3 setup.py build_ext --inplace<p>
     <p>
+        安裝過程如果遇到"darkflow AssertionError: expect 44948596 bytes, found 44948600"這種錯誤訊息: 在./darkflow-master/darkflow/utils/loader.py中的class weights_walker的self.offset=16改成改成self.offset=20就可以解決<p>
 2. <b>查看flow有哪些功能:</b><p>
     python ./flow --h<p>
         <p>
