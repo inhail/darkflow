@@ -6,7 +6,7 @@
 
 <h3>提醒：這是將自己測試過程、遇到的困難都做一個紀錄</h3>
 
-目標：用自己做的dataset，來訓練yolo/darkflow
+<h3>目標：用自己做的dataset，來訓練yolo/darkflow</h3>
 
 準備dataset：必須要有7種東西，如下說明
 
