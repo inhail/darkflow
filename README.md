@@ -21,7 +21,7 @@
 第7種：.data。到darknet的data資料夾中下載voc.data，然後修改裡面的內容。第一行的'classes = 20'數量修改成要訓練的類別數量、第四行的'names = data/voc.names'修改成'names = data/test.names'(test這個名稱是在上一步驟的.names檔的名稱，所以不一定每個人都要一樣)，存成自己想要的檔名(這次存成test.data)後放到./darkflow-master/cfg資料夾中。<p>
     
 <h2>使用darkflow</h2> 
-darkflow所有的使用方法可以直接參考darkflow(https://github.com/thtrieu/darkflow)網頁，只是要注意一點，在有用到flow這個功能的時候，如果跟我一樣是在命令提示字元下使用的，就要改成'python ./flow'。在這裡只記錄安裝及訓練這2個動作的流程(都在cmd下進行下列動作)<p>
+darkflow所有的使用方法可以直接參考<a href="https://github.com/thtrieu/darkflow">darkflow</a>網頁，只是要注意一點，在有用到flow這個功能的時候，如果跟我一樣是在命令提示字元下使用的，就要改成'python ./flow'。在這裡只記錄安裝及訓練這2個動作的流程(都在cmd下進行下列動作)<p>
 <p>
 1. <b>安裝：</b><p>  
     d:<p>                                                                                                                                       cd D:/darkflow-master<p>                                                                                                                   python3 setup.py build_ext --inplace<p>
