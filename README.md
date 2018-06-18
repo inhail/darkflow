@@ -24,7 +24,7 @@
 darkflow所有的使用方法可以直接參考darkflow(https://github.com/thtrieu/darkflow)網頁，只是要注意一點，在有用到flow這個功能的時候，如果跟我一樣是在命令提示字元下使用的，就要改成'python ./flow'。在這裡只記錄安裝及訓練這2個動作的流程(都在cmd下進行下列動作)<p>
 <p>
 1. <b>安裝：</b><p>  
-    d:                                                                                                                                       cd D:/darkflow-master                                                                                                                   python3 setup.py build_ext --inplace
+    d:<p>                                                                                                                                       cd D:/darkflow-master<p>                                                                                                                   python3 setup.py build_ext --inplace<p>
     <p>
 2. <b>查看flow有哪些功能:</b><p>
     python ./flow --h<p>
