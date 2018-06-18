@@ -3,10 +3,7 @@
 <br><b>code resouces : https://github.com/thtrieu/darkflow</b></br>
 <br><b>labeling tool : https://github.com/tzutalin/labelImg</b></br>
 <br><b>dataset preparation referece : https://blog.csdn.net/hysteric314/article/details/54097845</b></br>
-
-<h4>提醒：這是將自己測試過程、遇到的困難都做一個紀錄</h4>
-
-<h4>目標：用自己做的dataset，來訓練yolo/darkflow</h4>
+<h4>目標：用自己做的dataset，來訓練yolo/darkflow ( 提醒：這是將自己測試過程、遇到的困難都做一個紀錄 )</h4>
 
 準備dataset：必須要有7種東西，如下說明
 
