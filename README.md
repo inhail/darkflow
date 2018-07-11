@@ -31,33 +31,33 @@ darkflow所有的使用方法可以直接參考<a href="https://github.com/thtri
     python ./flow --h<p>
         <p>
 3. <b>使用darknet已經訓練好的model來做圖片辨識</b><p>
-    #先initialize model  
-    python ./flow --model cfg/yolov2.cfg  
-    #再用.cfg和.weights檔來預測  
-    python ./flow --model cfg/yolov2.cfg --load bin/yolov2.weights --imgdir sample_img/
-    #預測的結果會在./sample_img/out/裡面  
-    #想看到預測的結果的bounding box訊息，就要加入json參數  
-    python ./flow --model cfg/yolov2.cfg --load bin/yolov2.weights --imgdir sample_img/ --json
+    #先initialize model  <p>
+    python ./flow --model cfg/yolov2.cfg  <p>
+    #再用.cfg和.weights檔來預測  <p>
+    python ./flow --model cfg/yolov2.cfg --load bin/yolov2.weights --imgdir sample_img/<p>
+    #預測的結果會在./sample_img/out/裡面  <p>
+    #想看到預測的結果的bounding box訊息，就要加入json參數  <p>
+    python ./flow --model cfg/yolov2.cfg --load bin/yolov2.weights --imgdir sample_img/ --json<p>
 4. <b>用自己的dataset訓練：</b><p>
     python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --train --annotation train/Annotations --dataset train/Images  #(只有用CPU)<p>
     python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --train --annotation train/Annotations --dataset train/Images --gpu 1.0  #(用了100%的GPU)<p>
-    # 也可以選擇optimizer  
-        python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --train --annotation train/Annotations --dataset train/Images --trainer adam
+    # 也可以選擇optimizer  <p>
+        python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --train --annotation train/Annotations --dataset train/Images --trainer adam<p>
     
 <h2>訓練完自己的model之後</h2>  
-訓練完自己的model之後，我們可以有底下幾種操作方式來do testing：  
-1. 我們會在darkflow資料夾中看到一個ckpt資料夾，裡面有checkpoint和.meta和.profile檔。先產生.pb檔（在darkflow的github有說明.pb檔）再進行預測  
-python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --savepb  
-python ./flow --pbLoad built_graph/yolov2-tiny-test.pb --metaLoad built_graph/yolov2-tiny-test.meta --imgdir sample_img/  
-2. 直接用.cfg和.weights檔進行預測  
-python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --imgdir sample_img/  
-3. 在上述兩個步驟，都可以透過改變threshold值來提高或降低"model的敏感度"，threshold值越小，model越敏感  
-python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --imgdir sample_img/ --threshold 0.25
+訓練完自己的model之後，我們可以有底下幾種操作方式來do testing：  <p>
+1. 我們會在darkflow資料夾中看到一個ckpt資料夾，裡面有checkpoint和.meta和.profile檔。先產生.pb檔（在darkflow的github有說明.pb檔）再進行預測  <p>
+python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --savepb  <p>
+python ./flow --pbLoad built_graph/yolov2-tiny-test.pb --metaLoad built_graph/yolov2-tiny-test.meta --imgdir sample_img/  <p>
+2. 直接用.cfg和.weights檔進行預測  <p>
+python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --imgdir sample_img/  <p>
+3. 在上述兩個步驟，都可以透過改變threshold值來提高或降低"model的敏感度"，threshold值越小，model越敏感  <p>
+python ./flow --model cfg/yolov2-tiny-test.cfg --load bin/yolov2-tiny.weights --imgdir sample_img/ --threshold 0.25<p>
   
   <h2>在訓練的過程或訓練完後，可能會有一些不滿意的or error發生，可以看這幾個討論串</h2>  
-  https://github.com/thtrieu/darkflow/issues/80  
-  https://github.com/thtrieu/darkflow/issues/473  
-  https://github.com/thtrieu/darkflow/issues/462  
+  https://github.com/thtrieu/darkflow/issues/80  <p>
+  https://github.com/thtrieu/darkflow/issues/473  <p>
+  https://github.com/thtrieu/darkflow/issues/462  <p>
   https://github.com/thtrieu/darkflow/issues/149
   
 <h2>reading recommandation</h2>  
